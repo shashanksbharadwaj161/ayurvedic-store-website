@@ -1,0 +1,19 @@
+Options -MultiViews
+RewriteEngine On
+
+# WordPress API and admin (passthrough)
+RewriteRule ^wp-admin - [L]
+RewriteRule ^wp-login\.php - [L]
+RewriteRule ^wp-cron\.php - [L]
+RewriteRule ^wp-json - [L]
+RewriteRule ^wp-content - [L]
+RewriteRule ^wp-includes - [L]
+RewriteRule ^xmlrpc\.php - [L]
+
+# Serve real files and directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Everything else → React Router
+RewriteRule ^ index.html [QSA,L]
