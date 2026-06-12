@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const WC_URL    = import.meta.env.VITE_WC_URL    || 'https://whitesmoke-zebra-795108.hostingersite.com'
+const WC_URL    = import.meta.env.VITE_WC_URL    || 'https://olivedrab-wildcat-394337.hostingersite.com'
 const WC_KEY    = import.meta.env.VITE_WC_KEY    || ''
 const WC_SECRET = import.meta.env.VITE_WC_SECRET || ''
 
